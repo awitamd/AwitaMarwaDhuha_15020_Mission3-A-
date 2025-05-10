@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - Videobelajar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">
+      <img src="videobelajar.png" alt="Videobelajar">
+    </h1>
+  </header>
+
+  <main class="form-container">
+    <h2>Pendaftaran Akun</h2>
+    <p>Yuk, daftarkan akunmu sekarang juga!</p>
+    <form action="home.html">
+      <label for="fullname">Nama Lengkap *</label>
+      <input type="text" id="fullname" required>
+
+      <label for="email">E-Mail *</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">No. HP *</label>
+      <div class="phone-wrapper">
+        <span class="phone-prefix">+62</span>
+        <input type="tel" id="phone" required>
+      </div>
+
+      <label for="password">Kata Sandi *</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" required>
+        <span class="toggle-password" onclick="togglePassword('password', this)">👁</span>
+      </div>
+
+      <label for="confirm">Konfirmasi Kata Sandi *</label>
+      <div class="password-wrapper">
+        <input type="password" id="confirm" required>
+        <span class="toggle-password" onclick="togglePassword('confirm', this)">👁</span>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Daftar</button>
+      <a href="index.html" class="btn btn-secondary">Masuk</a>
+
+      <p class="or-text">atau</p>
+      
+      <button type="button" class="btn btn-google">
+        <img src="logos_google-icon.png" alt="Google Logo" class="google-img">
+        Daftar dengan Google
+      </button>
+    </form>
+  </main>
+
+  <script>
+    function togglePassword(fieldId, el) {
+      const input = document.getElementById(fieldId);
+      input.type = input.type === "password" ? "text" : "password";
+      el.textContent = input.type === "password" ? "👁" : "🙈";
+    }
+  </script>
+</body>
+</html>

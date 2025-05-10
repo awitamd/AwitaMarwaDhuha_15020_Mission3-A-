@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk - Videobelajar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo"> <!-- Ganti dengan logo gambar jika ada -->
+      <img src="videobelajar.png" alt="Videobelajar">
+    </h1>
+  </header>
+
+  <main class="form-container">
+    <h2>Masuk ke Akun</h2>
+    <p>Yuk, lanjutin belajarmu di videobelajar.</p>
+    <form action="home.html">
+      <label for="email">E-Mail *</label>
+      <input type="email" id="email" required>
+
+      <label for="password">Kata Sandi *</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" required>
+        <span class="toggle-password" onclick="togglePassword('password', this)">👁</span>
+      </div>
+
+      <a href="#" class="forgot-link">Lupa Password?</a>
+
+      <button type="submit" class="btn btn-primary">Masuk</button>
+      <a href="register.html" class="btn btn-secondary">Daftar</a>
+      <p class="or-text">atau</p>
+      <button type="button" class="btn btn-google">
+        <img src="logos_google-icon.png" alt="Google Logo" class="google-img">
+        Masuk dengan Google
+      </button>
+  </main>
+
+  <script>
+    function togglePassword(fieldId, el) {
+      const input = document.getElementById(fieldId);
+      input.type = input.type === "password" ? "text" : "password";
+      el.textContent = input.type === "password" ? "👁" : "🙈";
+    }
+  </script>
+</body>
+</html>
