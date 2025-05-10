@@ -147,7 +147,7 @@ input {
 /* === HERO SECTION === */
 .hero {
   position: relative;
-  background-image: url('hero.jpg'); /* Ganti dengan gambar hero Anda */
+  background-image: url('hero.jpg'); 
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
